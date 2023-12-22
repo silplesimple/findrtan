@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
 using Unity.VisualScripting;
+using UnityEngine.SceneManagement;
 
 public class gameManager : MonoBehaviour
 {
@@ -69,7 +70,8 @@ public class gameManager : MonoBehaviour
             {
                 
                 Time.timeScale = 0f;
-                Invoke("GameEnd", 1f);
+                endText.SetActive(true);
+                
             }
         }
         else
@@ -83,10 +85,10 @@ public class gameManager : MonoBehaviour
         secondCard = null;
        
     }
-
-    void GameEnd()
+    public void retryGame()
     {
-
+        SceneManager.LoadScene("MainScene");
     }
+
 
 }

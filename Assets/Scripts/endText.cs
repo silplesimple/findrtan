@@ -1,10 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class startBtn : MonoBehaviour
+public class endText : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -18,8 +17,10 @@ public class startBtn : MonoBehaviour
         
     }
 
-    public void GameStart()
-    {
-        SceneManager.LoadScene("MainScene");
+    public void ReGame()
+    { 
+            adsManager.I.ShowRewardAd();
+        
+
     }
 }

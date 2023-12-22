@@ -574,9 +574,9 @@ GameObject:
   - component: {fileID: 1745349205}
   - component: {fileID: 1745349208}
   - component: {fileID: 1745349207}
-  - component: {fileID: 1745349206}
   - component: {fileID: 1745349210}
   - component: {fileID: 1745349209}
+  - component: {fileID: 1745349211}
   m_Layer: 5
   m_Name: startBtn
   m_TagString: Untagged
@@ -604,18 +604,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -400}
   m_SizeDelta: {x: 360, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1745349206
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1745349204}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f897ab9849b1f8a4bb956d47f14668b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1745349207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -713,7 +701,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1745349206}
+      - m_Target: {fileID: 1745349211}
         m_TargetAssemblyTypeName: startBtn, Assembly-CSharp
         m_MethodName: GameStart
         m_Mode: 1
@@ -725,6 +713,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1745349211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745349204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f897ab9849b1f8a4bb956d47f14668b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2120700704
 GameObject:
   m_ObjectHideFlags: 0

@@ -24,7 +24,7 @@ public class gameManager : MonoBehaviour
     {
         int[] rtans = { 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7 };
         rtans = rtans.OrderBy(item => Random.Range(-1.0f, 1.0f)).ToArray();
-
+        Time.timeScale = 1f;
         for (int i = 0; i < 16; i++)  
         {
             GameObject newCard= Instantiate(card);
@@ -44,6 +44,11 @@ public class gameManager : MonoBehaviour
     {
         time += Time.deltaTime;
         timeText.text=time.ToString();
+        if(time>=30f)
+        {
+            endText.SetActive(true);
+            Time.timeScale = 0f;
+        }
     }
 
     public void isMatched()
@@ -60,8 +65,9 @@ public class gameManager : MonoBehaviour
             int cardsLeft = GameObject.Find("cards").transform.childCount;
             if(cardsLeft==2)
             {
-                endText.SetActive(true);
+                
                 Time.timeScale = 0f;
+                Invoke("GameEnd", 1f);
             }
         }
         else
@@ -75,5 +81,10 @@ public class gameManager : MonoBehaviour
         secondCard = null;
        
     }
-  
+
+    void GameEnd()
+    {
+
+    }
+
 }

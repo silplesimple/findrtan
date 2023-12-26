@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class audioManager : MonoBehaviour
 {
-    public AudioSource audioSource;
+    public AudioSource audioSource; 
     public AudioClip bgmusic;
     // Start is called before the first frame update
     void Start()

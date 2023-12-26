@@ -18,8 +18,8 @@ public class endText : MonoBehaviour
     }
 
     public void ReGame()
-    { 
-            adsManager.I.ShowRewardAd();
+    {
+        SceneManager.LoadScene("MainScene");
         
 
     }

@@ -12,11 +12,12 @@ public class gameManager : MonoBehaviour
     public GameObject endText;
     public GameObject card;
     float time;
-    public static gameManager I;
     public GameObject firstCard;
     public GameObject secondCard;
     public AudioClip match;
     public AudioSource audioSource;
+
+    public static gameManager I;
     void Awake()
     {
         I = this;

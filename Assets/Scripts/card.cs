@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -28,33 +28,33 @@ public class card : MonoBehaviour //card클래스에 스크립트를 카드 오�
         
         if(gameManager.I.firstCard==null)//만약 첫번째 카드가 비어있다면
         {
-            gameManager.I.firstCard = gameObject;//첫번째 카드를 넣어라
+            gameManager.I.firstCard = gameObject;//오브젝트를 첫번째 카드에 넣어라
         }
-        else
+        else//그게 아니라면
         {
-            gameManager.I.secondCard = gameObject;
-            gameManager.I.isMatched();
+            gameManager.I.secondCard = gameObject;//오브젝트를 두번째 카드에 넣어라
+            gameManager.I.isMatched();//그리고 둘을 매치시켜라
         }
     }
-    public void destroyCard()
+    public void destroyCard()//카드를 부시는 함수
     {
-        Invoke("destroyCardInvoke", 1.0f);
+        Invoke("destroyCardInvoke", 1.0f);//destroyCardInvoke 함수를 1초 이따가 불러라
     }
 
-    void destroyCardInvoke()
+    void destroyCardInvoke()//Invoke 시킬 함수
     {
-        Destroy(gameObject);
+        Destroy(gameObject);//오브젝트를 파괴해라
     }
 
-    public void closeCard()
+    public void closeCard()//카드를 다시 닫는 함수
     {
-        Invoke("closeCardInvoke", 1.0f);
+        Invoke("closeCardInvoke", 1.0f);//closeCardInvoke 함수를 1초 이따 불러라
     }
 
-    void closeCardInvoke()
+    void closeCardInvoke()//Invoke 시킬 함수
     {
-        anim.SetBool("isOpen", false);
-        transform.Find("back").gameObject.SetActive(true);
-        transform.Find("front").gameObject.SetActive(false);
+        anim.SetBool("isOpen", false);//애니메이터에 bool isOpen함수를 false시켜 원상태로 되돌린다.
+        transform.Find("back").gameObject.SetActive(true);//자식오브젝트에 이름중에 back을 찾아서 setActive를 true로 바꿔 활성화 시킨다.
+        transform.Find("front").gameObject.SetActive(false);//자식오브젝트에 이름중에 front을 찾아서 setActive를 false로 바꿔 비활성화 시킨다.
     }
 }

@@ -7,6 +7,7 @@ public class card : MonoBehaviour //card클래스에 스크립트를 카드 오�
     public Animator anim; //public 으로 선언하여 animator를 넣게 해주는 변수anim를 선언
     public AudioClip flip; //public 으로 선언하여 audioClip을 넣게 해주는 변수 flip을 선언
     public AudioSource audioSouce; //public 으로 선언하여 AudioSource를 넣게 해주는 변수 audioSouce를 선언
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -49,6 +50,8 @@ public class card : MonoBehaviour //card클래스에 스크립트를 카드 오�
     public void closeCard()//카드를 다시 닫는 함수
     {
         Invoke("closeCardInvoke", 1.0f);//closeCardInvoke 함수를 1초 이따 불러라
+        
+        
     }
 
     void closeCardInvoke()//Invoke 시킬 함수
